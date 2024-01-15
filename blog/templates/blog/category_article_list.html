@@ -1,0 +1,203 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    {% load render_partial %}
+    <!-- Sidebar Modal Area -->
+    <div class="sidebar-modal">
+        <div class="sidebar-modal-inner">
+            <div class="sidebar-about-area">
+                <div class="title">
+                    <h2>درباره ما</h2>
+                    <p>ما معتقدیم تعامل با برند در ارتباطات کلیدی است. نوآوری های واقعی و تجربه مثبت مشتری قلب ارتباط
+                        موفق
+                        است. بدون محصولات و خدمات تقلبی مشتری پادشاه است، زندگی و نیازهای آنها الهام بخش است.</p>
+                </div>
+            </div>
+
+            <div class="sidebar-instagram-feed">
+                <h2>وبلاگ</h2>
+
+                <ul>
+                    <li>
+                        <a href="blog-details.html">
+                            <img src="{% static 'img/travel-page-img/sidebar-img/1.jpg' %}" alt="image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog-details.html">
+                            <img src="{% static 'img/travel-page-img/sidebar-img/2.jpg' %}" alt="image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog-details.html">
+                            <img src="{% static 'img/travel-page-img/sidebar-img/3.jpg' %}" alt="image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog-details.html">
+                            <img src="{% static 'img/travel-page-img/sidebar-img/4.jpg' %}" alt="image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog-details.html">
+                            <img src="{% static 'img/travel-page-img/sidebar-img/5.jpg' %}" alt="image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog-details.html">
+                            <img src="{% static 'img/travel-page-img/sidebar-img/6.jpg' %}" alt="image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog-details.html">
+                            <img src="{% static 'img/travel-page-img/sidebar-img/7.jpg' %}" alt="image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog-details.html">
+                            <img src="{% static 'img/travel-page-img/sidebar-img/8.jpg' %}" alt="image">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-contact-area">
+                <div class="contact-info">
+                    <div class="contact-info-content">
+                        <h2>
+                            <a href="tel:+61-821-456">+61-821-456</a>
+                            <span>OR</span>
+                            <a href="mailto:hello@trice.com">hello@osta.com</a>
+                        </h2>
+
+                        <ul class="social">
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="bx bxl-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="bx bxl-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="bx bxl-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="bx bxl-youtube"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="bx bxl-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <span class="close-btn sidebar-modal-close-btn">
+					<i class="bx bx-x"></i>
+				</span>
+        </div>
+    </div>
+    <!-- End Sidebar Modal Area -->
+
+    <!-- Start Page Title Area -->
+    <div class="page-title-area bg-3">
+        <div class="container">
+            <div class="page-title-content">
+                <h2>لیست مقالات</h2>
+                <ul>
+                    <li>
+                        <a href="{% url "home_app:index" %}">
+                            خانه
+                        </a>
+                    </li>
+
+                    <li class="active">لیست مقالات</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Title Area -->
+    {% render_partial 'blog:sidbar' %}
+
+    <div class="col-lg-8">
+        <div class="row">
+
+            {% for article in article %}
+
+
+                <div class="col-lg-6 col-md-6">
+                    <div class="single-featured">
+                        <a href="{% url 'blog:dtails' article.slug %}">
+                            <img src="{{ article.image.url }}" alt="Image">
+                        </a>
+
+                        <div class="featured-content">
+                            <ul class="date">
+                                <li>
+                                    {{ article.created }}
+                                </li>
+                                <li>
+                                    {{ article.category.all.first }}
+                                </li>
+                            </ul>
+
+                            <a href="{% url 'blog:dtails' article.slug %}">
+                                <h3>{{ article.title }}</h3>
+                            </a>
+                            <p>{{ article.summary }}</p>
+
+                            <a href="{% url 'blog:dtails' article.slug %}" class="read-more">
+                                ادامه مطلب
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+
+
+            <div class="col-lg-12 col-md-12">
+                {% if page_obj.has_other_pages %}
+                    <div class="pagination-area text-center">
+                        {% if page_obj.has_previous %}
+                            <a href="?page={{ page_obj.previous_page_number }}{% if request.GET.serch %}&serch={{ request.GET.serch }}
+                            {% endif %} " class="prev page-numbers">قبلی</a>
+                        {% endif %}
+                        {% for item in page_obj.paginator.page_range %}
+                            {% if page_obj.number == item %}
+                                <span class="page-numbers current" aria-current="page">{{ item }}</span>
+                            {% else %}
+                                <a href="?page={{ item }}{% if request.GET.serch %}&serch={{ request.GET.serch }}
+                            {% endif %}" class="page-numbers">{{ item }}</a>
+                            {% endif %}
+
+                        {% endfor %}
+
+                        {% if page_obj.has_next %}
+                            <a href="?page={{page_obj.next_page_number}}{% if request.GET.serch %}&serch={{ request.GET.serch }}
+                            {% endif %}" class="next page-numbers">بعدی</a>
+                        {% endif %}
+
+                    </div>
+                {% endif %}
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </section>
+
+
+
+{% endblock %}

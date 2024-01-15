@@ -1,0 +1,211 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <!-- Sidebar Modal Area -->
+    <div class="sidebar-modal">
+        <div class="sidebar-modal-inner">
+            <div class="sidebar-about-area">
+                <div class="title">
+                    <h2>درباره ما</h2>
+                    <p>ما معتقدیم تعامل با برند در ارتباطات کلیدی است. نوآوری های واقعی و تجربه مثبت مشتری قلب ارتباط
+                        موفق است. بدون محصولات و خدمات تقلبی مشتری پادشاه است، زندگی و نیازهای آنها الهام بخش است.</p>
+                </div>
+            </div>
+
+            <div class="sidebar-instagram-feed">
+                <h2>وبلاگ</h2>
+
+                <ul>
+                    <li>
+                        <a href="blog-details.html">
+                            <img src="{% static 'img/travel-page-img/sidebar-img/1.jpg' %}" alt="image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog-details.html">
+                            <img src="{% static 'img/travel-page-img/sidebar-img/2.jpg' %}" alt="image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog-details.html">
+                            <img src="{% static 'img/travel-page-img/sidebar-img/3.jpg' %}" alt="image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog-details.html">
+                            <img src="{% static 'img/travel-page-img/sidebar-img/4.jpg' %}" alt="image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog-details.html">
+                            <img src="{% static 'img/travel-page-img/sidebar-img/5.jpg' %}" alt="image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog-details.html">
+                            <img src="{% static 'img/travel-page-img/sidebar-img/6.jpg' %}" alt="image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog-details.html">
+                            <img src="{% static 'img/travel-page-img/sidebar-img/7.jpg' %}" alt="image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog-details.html">
+                            <img src="{% static 'img/travel-page-img/sidebar-img/8.jpg' %}" alt="image">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-contact-area">
+                <div class="contact-info">
+                    <div class="contact-info-content">
+                        <h2>
+                            <a href="tel:+61-821-456">+61-821-456</a>
+                            <span>OR</span>
+                            <a href="mailto:hello@trice.com">hello@osta.com</a>
+                        </h2>
+
+                        <ul class="social">
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="bx bxl-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="bx bxl-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="bx bxl-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="bx bxl-youtube"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="bx bxl-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <span class="close-btn sidebar-modal-close-btn">
+					<i class="bx bx-x"></i>
+				</span>
+        </div>
+    </div>
+    <!-- End Sidebar Modal Area -->
+
+    <!-- Start Page Title Area -->
+    <div class="page-title-area contact-page-title bg-1">
+        <div class="container">
+            <div class="page-title-content">
+                <h2>ارتباط</h2>
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            خانه
+                        </a>
+                    </li>
+
+                    <li class="active">ارتباط</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Title Area -->
+
+   <!-- Start Contact Area -->
+		<section class="contact-area pb-100">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="contact-wrap">
+							<div class="contact-form">
+								<div class="contact-title">
+									<span class="top-title">با هم در تماس باشیم</span>
+									<h2>تماس با ما</h2>
+								</div>
+								<form  method="POST">
+                                    {% csrf_token %}
+									<div class="row">
+										<div class="col-lg-6 col-sm-6">
+											<div class="form-group">
+												{{ form.name }}
+												<div class="help-block with-errors"></div>
+											</div>
+										</div>
+
+										<div class="col-lg-6 col-sm-6">
+											<div class="form-group">
+												{{ form.email }}
+												<div class="help-block with-errors"></div>
+											</div>
+										</div>
+
+										<div class="col-lg-6 col-sm-6">
+											<div class="form-group">
+												{{ form.phonnumber }}
+												<div class="help-block with-errors"></div>
+											</div>
+										</div>
+
+										<div class="col-lg-6 col-sm-6">
+											<div class="form-group">
+												{{ form.titl }}
+												<div class="help-block with-errors"></div>
+											</div>
+										</div>
+
+										<div class="col-lg-12 col-md-12">
+											<div class="form-group">
+												{{ form.body }}
+												<div class="help-block with-errors"></div>
+											</div>
+										</div>
+
+										<div class="col-lg-12 col-md-12">
+											<button type="submit" class="default-btn four">
+												ارسال
+											</button>
+											<div id="msgSubmit" class="h3 text-center hidden"></div>
+											<div class="clearfix"></div>
+										</div>
+
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Contact Area -->
+{#<form method="POST">#}
+{#{% csrf_token %}#}
+{#{{ form }}#}
+{#<button type="submit">send</button>#}
+{#</form>#}
+
+
+    <section class="from-book-area pb-100">
+        <div class="container">
+            <div class="section-title four">
+                <h2>دور دنیا با اوستا </h2>
+            </div>
+
+
+        </div>
+    </section>
+{% endblock %}

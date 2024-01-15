@@ -1,0 +1,93 @@
+{% load static %}
+<section class="blog-details-area left-sidebar ptb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="blog-details-right-area">
+                    <div class="blog-widget search-widget">
+                        <h3 class="title">جستجو</h3>
+{#                        <form class="search-form" action="mm.php">#}
+{#                            <input type="search" class="form-control" placeholder="قسمتی از عنوان مقاله را وارد کنید ..." name="serch" value="{% if request.GET.serch %}{{ request.GET.serch }}#}
+{#                            {% endif %} ">#}
+{#                            <button type="submit" >#}
+{#                                <i class="bx bx-search"></i>#}
+{#                            </button>#}
+{#                        </form>#}
+                    </div>
+
+                    <div class="blog-widget resent-post-widget">
+                        <h3 class="title">پست های اخیر</h3>
+                        <ul>
+                            {% for item in recent_article %}
+                                <li>
+                                    <a href="{% url 'blog:dtails' item.slug %}">
+                                        <img src="" alt="Image">
+                                        <span>{{ item.created }}</span>
+                                        <h3>{{ item.title }}</h3>
+                                    </a>
+                                </li>
+                            {% endfor %}
+
+
+                        </ul>
+                    </div>
+
+{#                    <div class="blog-widget archives-widget">#}
+{#                        <h3 class="title">آرشیو</h3>#}
+{#                        <ul>#}
+{#                            <li>#}
+{#                                <a href="#">#}
+{#                                    فروردین#}
+{#                                    <span>1401</span>#}
+{#                                </a>#}
+{#                            </li>#}
+{#                            <li>#}
+{#                                <a href="#">#}
+{#                                    اردیبهشت#}
+{#                                    <span>1401</span>#}
+{#                                </a>#}
+{#                            </li>#}
+{#                            <li>#}
+{#                                <a href="#">#}
+{#                                    خرداد#}
+{#                                    <span>1401</span>#}
+{#                                </a>#}
+{#                            </li>#}
+{#                            <li>#}
+{#                                <a href="#">#}
+{#                                    تیر#}
+{#                                    <span>1401</span>#}
+{#                                </a>#}
+{#                            </li>#}
+{#                            <li>#}
+{#                                <a href="#">#}
+{#                                    مرداد#}
+{#                                    <span>1401</span>#}
+{#                                </a>#}
+{#                            </li>#}
+{#                            <li>#}
+{#                                <a href="#">#}
+{#                                    شهریور#}
+{#                                    <span>1401</span>#}
+{#                                </a>#}
+{#                            </li>#}
+{#                        </ul>#}
+{#                    </div>#}
+
+                    <div class="blog-widget categories-widget">
+                        <h3 class="title">دسته بندی ها</h3>
+                        <ul>
+                            {% for cat in category %}
+                                <li>
+                                    <a href="{% url 'blog:list_category' cat.id %}">
+                                        {{ cat.title }}
+                                        <span>{{ cat.created.Year }}</span>
+                                    </a>
+                                </li>
+                            {% endfor %}
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>

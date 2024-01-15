@@ -1,0 +1,13 @@
+{% extends "admin/base.html" %}
+{% load static %}
+{% block title %}مدیریت بلاگ {% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">پنل ادمین جنگو</a></h1>
+{% if user.is_anonymous %}
+  {% include "admin/color_theme_toggle.html" %}
+{% endif %}
+    {% block extrastyle %}<link rel="stylesheet" type="text/css" href="{% static 'css/override.css' %}" /> {% endblock %}
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

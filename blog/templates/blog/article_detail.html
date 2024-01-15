@@ -1,0 +1,376 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    {% load social_share %}
+    {{ article.title }}
+{% endblock %}
+{% block content %}
+
+    <!-- Sidebar Modal Area -->
+    <div class="sidebar-modal">
+        <div class="sidebar-modal-inner">
+            <div class="sidebar-about-area">
+                <div class="title">
+                    <h2>درباره ما</h2>
+                    <p>ما معتقدیم تعامل با برند در ارتباطات کلیدی است. نوآوری های واقعی و تجربه مثبت مشتری قلب ارتباط
+                        موفق است. بدون محصولات و خدمات تقلبی مشتری پادشاه است، زندگی و نیازهای آنها الهام بخش است.</p>
+                </div>
+            </div>
+
+            <div class="sidebar-instagram-feed">
+                <h2>وبلاگ</h2>
+
+                <ul>
+                    <li>
+                        <a href="blog-details.html">
+                            <img src="{% static 'img/travel-page-img/sidebar-img/1.jpg' %}" alt="image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog-details.html">
+                            <img src="{% static 'img/travel-page-img/sidebar-img/2.jpg' %}" alt="image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog-details.html">
+                            <img src="{% static 'img/travel-page-img/sidebar-img/3.jpg' %}" alt="image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog-details.html">
+                            <img src="{% static 'img/travel-page-img/sidebar-img/4.jpg' %}" alt="image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog-details.html">
+                            <img src="{% static 'img/travel-page-img/sidebar-img/5.jpg' %}" alt="image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog-details.html">
+                            <img src="{% static 'img/travel-page-img/sidebar-img/6.jpg' %}" alt="image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog-details.html">
+                            <img src="{% static 'img/travel-page-img/sidebar-img/7.jpg' %}" alt="image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog-details.html">
+                            <img src="{% static 'img/travel-page-img/sidebar-img/8.jpg' %}" alt="image">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-contact-area">
+                <div class="contact-info">
+                    <div class="contact-info-content">
+                        <h2>
+                            <a href="tel:+61-821-456">+61-821-456</a>
+                            <span>OR</span>
+                            <a href="mailto:hello@trice.com">hello@osta.com</a>
+                        </h2>
+
+                        <ul class="social">
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="bx bxl-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="bx bxl-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="bx bxl-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="bx bxl-youtube"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="bx bxl-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <span class="close-btn sidebar-modal-close-btn">
+					<i class="bx bx-x"></i>
+				</span>
+        </div>
+    </div>
+    <!-- End Sidebar Modal Area -->
+
+    <!-- Start Page Title Area -->
+    <div style="background-image: url('{% static '/img/page-title-bg/3.jpg' %}')"
+         class="page-title-area contact-page-title bg-3">
+        <div class="container">
+            <div class="page-title-content">
+                <h2>جزئیات بلاگ</h2>
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            خانه
+                        </a>
+                    </li>
+
+                    <li class="active">جزئیات بلاگ</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Title Area -->
+
+    <!-- Start Exploring Area exploring-area-->
+    <section class="exploring-area">
+        <div class="container">
+            <div class="exploring-bg-wrap">
+                <div class="exploring-wrap">
+                    <ul class="date">
+                        <li>{{ article.created }}</li>
+                        <li>{{ article.author }}</li>
+                    </ul>
+                    <h2>{{ article.title }}</h2>
+
+                    <div class="admin">
+                        <img src="{% static 'img/admin-img.jpg' %}" alt="Image">
+                        <h3>{{ article.author }}</h3>
+                        <span>وبلاگ نویس مسافر</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Exploring Area -->
+
+    <section class="blog-details-area ptb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="blog-details-left-area">
+                        <div class="blog-details-single-post">
+                            <span>{{ article.author }}</span>
+                            <h3>{{ article.title }}</h3>
+
+                            <ul>
+                                <li><i class="bx bx-time"></i> {{ article.update }}</li>
+                                <li>
+                                    <a href="#">
+                                        <i class="bx bx-street-view"></i>
+                                        بازدید
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="bx bx-comment"></i>
+                                        03 کامنت
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <div class="blog-details-img">
+                                <img src="{{ article.image.url }}" alt="Image">
+                            </div>
+
+                            <p>{{ article.summary }}</p>
+                        </div>
+
+                        <div class="blog-details-sheare">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-sm-6">
+                                    <div class="blog-sheare-tag">
+                                        <ul>
+                                            {% if liked %}
+
+
+                                                <button style="width: 50px ; height: 50px "><a onclick="like('{{ article.slug }}','{{ article.id }}')"
+                                                        > <span id="like"
+                                                        style="color:red;font-size: xx-large; display: inline">&#9829;	</span></a><span
+                                                        style="display: inline"><span id="count">{{ article.like.all.count }}</span></span></button>
+                                            {% else %}
+                                                <button style="width: 50px ; height: 50px "><a onclick="like('{{ article.slug }}','{{ article.id }}')"> <span id="like"
+                                                        style="color:white;font-size: xx-large; display: inline">&#9829;	</span></a><span
+                                                        style="display: inline"><span id="count">{{ article.like.all.count }}</span></span></button>
+                                            {% endif %}
+                                        </ul>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-6">
+                                    <ul class="social-icon">
+                                        <li class="share">
+                                            {% post_to_whatsapp article.get_absolute_url "Share via WhatsApp" %}
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="bx bxl-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="bx bxl-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="bx bxl-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="bx bxl-linkedin"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="bx bxl-youtube"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comments-wrap">
+                            <h3 class="title">کامنت ها(02)</h3>
+
+                            <ul>
+                                {% for comment in article.comment.all %}
+                                    {% if comment.parent == None %}
+                                        <li>
+                                            <img src="{% static 'img/blog-details-img/comments-img-1.jpg' %}"
+                                                 alt="Image">
+                                            <h3>{{ comment.user }}</h3>
+                                            <span> {{ comment.created }}</span>
+                                            <p>{{ comment.text }}</p>
+                                            <a href="#fs" onclick="set_value({{ comment.id }})"> پاسخ </a>
+                                        </li>
+                                        {% for reply in comment.reply.all %}
+
+                                            <li class="ml-30">
+                                                <img src="{% static 'img/blog-details-img/comments-img-2.jpg' %}"
+                                                     alt="Image">
+                                                <h3>{{ reply.user }}</h3>
+                                                <span>{{ reply.created }}</span>
+                                                <p>{{ reply.text }}</p>
+                                                <a href="#">پاسخ </a>
+                                            </li>
+                                        {% endfor %}
+
+                                    {% endif %}
+
+                                {% endfor %}
+
+
+                            </ul>
+                        </div>
+
+                        <div class="contact-area">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="contact-wrap mt-0">
+                                        <div class="contact-form">
+                                            <div class="contact-title">
+                                                <span class="top-title">با هم در تماس باشیم</span>
+                                                <h2>تماس با ما</h2>
+                                            </div>
+                                            <form method="post">
+                                                {% csrf_token %}
+
+                                                <div class="row">
+                                                    <input type="hidden" id="parent" name="parent" value="">
+
+                                                    <div id="fs" class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <textarea name="text_body" class="form-control"
+                                                                      id="text_body"
+                                                                      cols="30" rows="8" required
+                                                                      data-error="پیام خود را بنویسید"
+                                                                      placeholder="پیام شما"></textarea>
+                                                            <div class="help-block with-errors"></div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <button type="submit" class="default-btn four">
+                                                            ارسال
+                                                        </button>
+                                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="blog-details-right-area">
+                        <div class="blog-widget search-widget">
+                            <h3 class="title">جستجو</h3>
+                            <form class="search-form" action="">
+                                <input type="search" class="form-control" placeholder="جستجو..." name="serch">
+                                <button type="submit">
+                                    <i class="bx bx-search"></i>
+                                </button>
+                            </form>
+                        </div>
+
+                        <div class="blog-widget resent-post-widget">
+                            <h3 class="title">پست های اخیر</h3>
+                            <ul>
+                                {% for item in recent_article %}
+                                    <li>
+                                        <a href="">
+                                            <img src="" alt="Image">
+                                            <span>{{ item.created }}</span>
+                                            <h3>{{ item.title }}</h3>
+                                        </a>
+                                    </li>
+                                {% endfor %}
+
+                            </ul>
+                        </div>
+
+                        <div class="blog-widget categories-widget">
+                            <h3 class="title">دسته بندی ها</h3>
+                            <ul>
+                                {% for cat in category %}
+                                    <li>
+                                        <a href="{% url 'blog:list_category' cat.id %}">
+                                            {{ cat.title }}
+                                            <span>{{ cat.created.Year }}</span>
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <script>
+        function set_value(id) {
+            document.getElementById('parent').value = id;
+
+        }
+
+
+    </script>
+{% endblock %}
+

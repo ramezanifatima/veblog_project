@@ -1,0 +1,135 @@
+{% load static %}
+<header class="header-area">
+    <!-- Start Navbar Area -->
+    <div class="nav-area nav-area-three">
+        <div class="navbar-area">
+            <!-- Menu For Mobile Device -->
+            <div class="mobile-nav">
+                <a href="{% static "index.html" %}" class="logo">
+{#                    <img src="{% static "img/logo.png" %}" alt="Logo">#}
+                </a>
+            </div>
+
+            <!-- Menu For Desktop Device -->
+            <div class="main-nav">
+                <nav class="navbar navbar-expand-md">
+                    <div class="container-fluid">
+                        <div class="collapse navbar-collapse mean-menu">
+                            <ul class="navbar-nav m-auto">
+
+
+                                <li class="nav-item">
+                                    <a href="about.html" class="nav-link">درباره من</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        صفحات داخلی
+                                        <i class="bx bx-chevron-down"></i>
+                                    </a>
+
+                                    <ul class="dropdown-menu">
+{#                                        <li class="nav-item">#}
+{#                                            <a href="#" class="nav-link">#}
+{#                                                نوع پست#}
+{#                                                <i class="bx bx-chevron-left"></i>#}
+                                            </a>
+
+                                            <ul class="dropdown-menu">
+
+                                            </ul>
+                                        </li>
+
+{#                                        <li class="nav-item">#}
+{#                                            <a href="#" class="nav-link">#}
+{#                                                فروشگاه#}
+{#                                                <i class="bx bx-chevron-left"></i>#}
+{#                                            </a>#}
+
+{#                                            #}
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                نوع وبلاگ
+                                                <i class="bx bx-chevron-left"></i>
+                                            </a>
+
+                                            <ul class="dropdown-menu">
+                                                
+                                                <li class="nav-item">
+                                                    <a href={% url 'blog:list' %} class="nav-link"> لیست بلاگ ها  </a>
+                                                </li>
+                                              
+                                                <li class="nav-item">
+                                                    <a href="video.html" class="nav-link">ویدیو</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                کاربر
+                                                <i class="bx bx-chevron-left"></i>
+                                            </a>
+
+                                            <ul class="dropdown-menu">
+                                                {% if request.user.is_authenticated %}
+                                                    <li class="nav-item">
+                                                        <a href="{% url 'account:profile' %}" class="nav-link">پروفایل
+                                                            کاربر</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="{% url 'account:logout' %}" class="nav-link">خروج</a>
+                                                    </li>
+                                                {% else %}
+                                                    <li class="nav-item">
+                                                        <a href="{% url "account:login" %}" class="nav-link">ورود</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="{% url 'account:signin' %}" class="nav-link">ثبت
+                                                            نام </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                    <a href="recover-password.html" class="nav-link">فراموشی رمز
+                                                        عبور</a>
+                                                {% endif %}
+                                                </li>
+
+                                            </ul>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="review.html" class="nav-link">نظر کاربران</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="author.html" class="nav-link">صفحه نویسنده</a>
+                                        </li>
+
+
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item logo">
+                                    <a href="minimal.html" class="nav-link">
+                                        <img src="{% static "img/logo.png" %}" alt="Image">
+                                    </a>
+                                </li>
+
+
+
+                                <li class="nav-item">
+                                    <a href="{% url 'blog:contact' %}" class="nav-link">ارتباط</a>
+                                </li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- End Navbar Area -->
+</header>

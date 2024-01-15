@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    {{ article.title }}
+{% endblock %}
+{% block content %}
+
+
+
+
+    <!-- Start Design Sponge Area -->
+    <section class="design-sponge-area">
+        <div class="container-fluid p-0">
+            <div class="design-sponge-wrap owl-carousel owl-theme">
+                {% for article in item %}
+                    <div class="design-sponge-item">
+                        <img src="{{ article.image.url }}" alt="Image">
+
+                        <div class="design-sponge-content">
+                            <div class="admin">
+                                <img src="{% static "img/interior-page-img/design-sponge-img/admin-img.jpg" %}"
+                                     alt="Image">
+                                <a href="#">{{ article.author.username }}</a>
+                            </div>
+
+                            <a href={{ article.get_absolute_url }}>
+                                <h3>{{ article.title }}</h3>
+                            </a>
+
+                            <ul class="date">
+                                <li>{{ article.created }}</li>
+                                <li>{{ article.category.first }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!-- End Design Sponge Area -->
+
+    <!-- Start آدرس Area -->
+    <section class="address-area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="email-area">
+                        <span>برای هر گونه سوال به ما ایمیل بزنید</span>
+                        <a href="mailto:contact@osta.com">
+                            contact@osta.com
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="subscribe-wrap">
+                        <h2>عضویت در خبرنامه</h2>
+                        <form class="newsletter-form" data-toggle="validator">
+                            <input type="email" class="form-control" placeholder="ایمیل خود را وارد کنید" name="EMAIL"
+                                   required autocomplete="off">
+
+                            <button class="default-btn two" type="submit">
+                                عضویت
+                            </button>
+
+                            <div id="validator-newsletter" class="form-result"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End آدرس Area -->
+
+    <!-- Start Latest Articles Area -->
+    <section class="latest-articles-area">
+        <div class="container-fluid">
+            <div class="section-title three">
+                <h2>آخرین مقالات</h2>
+            </div>
+
+            <div class="row">
+                {% for article in recent_article %}
+                    <div class="col-lg-6">
+                        <div class="row rsm">
+                            <div class="col-lg-6 col-md-6 p-0">
+                                <div class="latest-articles-img bg-1"
+                                     style="background-image: url({{ article.image.url }})"></div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 p-0">
+                                <div class="latest-articles-content">
+                                    <ul class="date">
+                                        <li>  {{ article.created }}</li>
+                                        <li> {{ article.category.all.first }}</li>
+                                    </ul>
+
+                                    <a href="blog-details.html">
+                                        <h3>{{ article.title }} </h3>
+                                    </a>
+                                    <p>{{ article.summary }}</p>
+
+                                    <a href="blog-details.html" class="read-more">
+                                        ادامه مطلب
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
+    <!-- End Latest Articles Area -->
+
+    <!-- Start News Update Area -->
+    <section class="news-update">
+        <div class="container-fluid">
+
+
+            <div class="row">
+                <div class="col-lg-9 mb-30">
+
+
+                    <div class="section-title three">
+                        <h2>مقالاتی که باید بخوانید</h2>
+                    </div>
+
+
+
+                    <div class="categories-area">
+                        <h3>دسته ها</h3>
+                        <ul>
+                            {% for cat in cat %}
+                                <li>
+                                    <a href="{% url 'blog:list_category' cat.id %}">{{ cat.title }}<span>{{ cat.articles.all.count }}</span></a>
+                                </li>
+                            {% endfor %}
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Latest Articles Area -->
+
+    {#
+
+
+
+{% endblock %}
+
+

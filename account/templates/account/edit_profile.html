@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block  content %}
+<!-- Start Page Title Area -->
+		<div class="page-title-area bg-9">
+			<div class="container">
+				<div class="page-title-content">
+					<h2>بازیابی رمز عبور</h2>
+					<ul>
+						<li>
+							<a href="index.html">
+								خانه
+							</a>
+						</li>
+
+						<li class="active">بازیابی رمز عبور</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- End Page Title Area -->
+
+		<!-- Start Sign Up Area -->
+		<div class="user-area-all-style sign-up-area ptb-100">
+			<div class="container">
+				<div class="contact-form-action">
+					<form method="post">
+
+
+							<div class="col-md-12 col-sm-12">
+								<div class="form-group">
+									{{ form.first_name }}
+								</div>
+							</div>
+
+							<div class="col-md-12 col-sm-12 ">
+								<div class="form-group">
+									{{ form.last_name }}
+								</div>
+							</div>
+
+
+							<div class="col-md-12 col-sm-12">
+								<div class="form-group">
+									{{ form.email }}
+								</div>
+							</div>
+
+
+
+
+
+
+
+
+							<div class="col-12">
+								<button class="default-btn btn-two" type="submit">
+									ارسال
+								</button>
+							</div>
+
+
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- End Sign Up Area -->
+    <div>
+    </div>
+  {% endblock %}

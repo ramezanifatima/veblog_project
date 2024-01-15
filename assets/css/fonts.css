@@ -1,0 +1,112 @@
+/* IRANSans Font */
+@font-face {
+    font-family: 'iransans';
+    src: url('../fonts/IRANSans/IRANSansXV.woff') format('woff-variations'),
+    url('../fonts/IRANSans/IRANSansXV.woff') format('woff');
+    font-weight: 100 900;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'iransans';
+    src: url('../fonts/IRANSans/IRANSansXV.woff2') format('woff2-variations'),
+    url('../fonts/IRANSans/IRANSansXV.woff2') format('woff2');
+    font-weight: 100 900;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'iransans';
+    src: url('../fonts/IRANSans/IRANSansXV.ttf') format('truetype-variations'),
+    url('../fonts/IRANSans/IRANSansXV.ttf') format('truetype');
+    font-weight: 100 900;
+    font-display: fallback;
+}
+
+/* Pelak Font */
+@font-face {
+	font-family: Pelak;
+	font-style: normal;
+	font-weight: 100;
+	src: url('../fonts/Pelak/eot/Pelak-Thin.eot');
+	src: url('../fonts/Pelak/eot/Pelak-Thin.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Pelak/woff2/Pelak-Thin.woff2') format('woff2'),
+		 url('../fonts/Pelak/woff/Pelak-Thin.woff') format('woff'),
+		 url('../fonts/Pelak/otf/Pelak-Thin.otf') format('opentype');
+}
+@font-face {
+	font-family: Pelak;
+	font-style: normal;
+	font-weight: 200;
+	src: url('../fonts/Pelak/eot/Pelak-light.eot');
+	src: url('../fonts/Pelak/eot/Pelak-light.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Pelak/woff2/Pelak-light.woff2') format('woff2'),
+		 url('../fonts/Pelak/woff/Pelak-light.woff') format('woff'),
+		 url('../fonts/Pelak/otf/Pelak-light.otf') format('opentype');
+}
+@font-face {
+	font-family: Pelak;
+	font-style: normal;
+	font-weight: 300;
+	src: url('../fonts/Pelak/eot/Pelak-regular.eot');
+	src: url('../fonts/Pelak/eot/Pelak-regular.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Pelak/woff2/Pelak-regular.woff2') format('woff2'),
+		 url('../fonts/Pelak/woff/Pelak-regular.woff') format('woff'),
+		 url('../fonts/Pelak/otf/Pelak-regular.otf') format('opentype');
+}
+@font-face {
+	font-family: Pelak;
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/Pelak/eot/Pelak-medium.eot');
+	src: url('../fonts/Pelak/eot/Pelak-medium.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Pelak/woff2/Pelak-medium.woff2') format('woff2'),
+		 url('../fonts/Pelak/woff/Pelak-medium.woff') format('woff'),
+		 url('../fonts/Pelak/otf/Pelak-medium.otf') format('opentype');
+}
+@font-face {
+	font-family: Pelak;
+	font-style: normal;
+	font-weight: 500;
+	src: url('../fonts/Pelak/eot/Pelak-semiBold.eot');
+	src: url('../fonts/Pelak/eot/Pelak-semiBold.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Pelak/woff2/Pelak-semiBold.woff2') format('woff2'),
+		 url('../fonts/Pelak/woff/Pelak-semiBold.woff') format('woff'),
+		 url('../fonts/Pelak/otf/Pelak-semiBold.otf') format('opentype');
+}
+@font-face {
+	font-family: Pelak;
+	font-style: normal;
+	font-weight: 600;
+	src: url('../fonts/Pelak/eot/Pelak-Bold.eot');
+	src: url('../fonts/Pelak/eot/Pelak-Bold.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Pelak/woff2/Pelak-Bold.woff2') format('woff2'),
+		 url('../fonts/Pelak/woff/Pelak-Bold.woff') format('woff'),
+		 url('../fonts/Pelak/otf/Pelak-Bold.otf') format('opentype');
+}
+@font-face {
+	font-family: Pelak;
+	font-style: normal;
+	font-weight: 800;
+	src: url('../fonts/Pelak/eot/Pelak-ExtraBold.eot');
+	src: url('../fonts/Pelak/eot/Pelak-ExtraBold.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Pelak/woff2/Pelak-ExtraBold.woff2') format('woff2'),
+		 url('../fonts/Pelak/woff/Pelak-ExtraBold.woff') format('woff'),
+		 url('../fonts/Pelak/otf/Pelak-ExtraBold.otf') format('opentype');
+}
+@font-face {
+	font-family: Pelak;
+	font-style: normal;
+	font-weight: 900;
+	src: url('../fonts/Pelak/eot/Pelak-Black.eot');
+	src: url('../fonts/Pelak/eot/Pelak-Black.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Pelak/woff2/Pelak-Black.woff2') format('woff2'),
+		 url('../fonts/Pelak/woff/Pelak-Black.woff') format('woff'),
+		 url('../fonts/Pelak/otf/Pelak-Black.otf') format('opentype');
+}
+
+/* Lalezae Font */
+@font-face {
+    font-family: lalezar;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/lalezar.otf');
+}

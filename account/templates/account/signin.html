@@ -1,0 +1,640 @@
+{% load static %}
+
+<!doctype html>
+<html lang="fa">
+    <head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS --> 
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+		<!-- Owl Theme Default CSS --> 
+		<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+		<!-- Owl Carousel CSS --> 
+		<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+		<!-- Owl Magnific CSS --> 
+		<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+		<!-- Boxicons CSS --> 
+		<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"> 
+		<!-- Flaticon CSS --> 
+		<link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+		<!-- Meanmenu CSS -->
+		<link rel="stylesheet" href="{% static 'css/meanmenu.css' %}]">
+		<!-- Nice Select CSS -->
+		<link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+		<!-- Style CSS -->
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+		<!-- Dark mode -->
+                <link rel="stylesheet" href="{% static 'css/dark.css' %}">
+		<!-- Responsive CSS -->
+		<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+		<!-- Rtl CSS -->
+		<link rel="stylesheet" href="{% static 'css/rtl.css' %}">
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}">
+		
+		<!-- Title -->
+		<title>اوستا - قالب چند منظوره وبلاگ</title>
+    </head>
+
+    <body>
+		
+		<!-- Start Heder Area --> 
+		<header class="header-area fixed-top">
+			<!-- Start Navbar Area -->
+			<div class="nav-area nav-area-four">
+				<div class="navbar-area">
+					<!-- Menu For Mobile Device -->
+					<div class="mobile-nav">
+						<a href="index.html" class="logo">
+							<img src="{% static 'img/logo.png' %}" alt="Logo">
+						</a>
+					</div>
+
+					<!-- Menu For Desktop Device -->
+					<div class="main-nav bg-color">
+						<nav class="navbar navbar-expand-md">
+							<div class="container">
+								<div class="collapse navbar-collapse mean-menu">
+									<a class="navbar-brand" href="life-style.html">
+										<img src="{% static 'img/travel-page-img/logo.png' %}" alt="Logo">
+									</a>
+									
+									<ul class="navbar-nav m-auto">
+										<li class="nav-item">
+											<a href="#" class="nav-link">
+												صفحات اصلی
+												<i class="bx bx-chevron-down"></i>
+											</a>
+
+											<ul class="dropdown-menu">
+												<li class="nav-item">
+													<a href="life-style.html" class="nav-link">شیوه زندگی</a>
+												</li>
+												<li class="nav-item">
+													<a href="minimal.html" class="nav-link">مینیمال</a>
+												</li>
+												<li class="nav-item">
+													<a href="interior.html" class="nav-link">فضای داخلی</a>
+												</li>
+												<li class="nav-item">
+													<a href="travel.html" class="nav-link">مسافرت</a>
+												</li>
+												<li class="nav-item">
+													<a href="food/food.html" class="nav-link">غذا و خوراک</a>
+												</li>
+											</ul>
+										</li>
+
+										<li class="nav-item">
+											<a href="about.html" class="nav-link">درباره من</a>
+										</li>
+
+										<li class="nav-item">
+											<a href="#" class="nav-link active">
+												صفحات داخلی
+												<i class="bx bx-chevron-down"></i>
+											</a>
+		
+											<ul class="dropdown-menu">
+												<li class="nav-item">
+													<a href="#" class="nav-link">
+														نوع پست
+														<i class="bx bx-chevron-left"></i>
+													</a>
+			
+													<ul class="dropdown-menu">
+														<li class="nav-item">
+															<a href="post-style-one.html" class="nav-link">نوع 1</a>
+														</li>
+														<li class="nav-item">
+															<a href="post-style-two.html" class="nav-link">نوع 2</a>
+														</li>
+													</ul>
+												</li>
+
+												<li class="nav-item">
+													<a href="#" class="nav-link">
+														فروشگاه
+														<i class="bx bx-chevron-left"></i>
+													</a>
+			
+													<ul class="dropdown-menu">
+														<li class="nav-item">
+															<a href="shop.html" class="nav-link">خرید</a>
+														</li>
+														<li class="nav-item">
+															<a href="cart.html" class="nav-link">سبد خرید</a>
+														</li>
+														<li class="nav-item">
+															<a href="checkout.html" class="nav-link">تسویه</a>
+														</li>
+														<li class="nav-item">
+															<a href="product-details.html" class="nav-link">جزئیات محصول</a>
+														</li>
+													</ul>
+												</li>
+
+												<li class="nav-item">
+													<a href="#" class="nav-link">
+														نوع وبلاگ
+														<i class="bx bx-chevron-left"></i>
+													</a>
+				
+													<ul class="dropdown-menu">
+														<li class="nav-item">
+															<a href="full-width-blog.html" class="nav-link">تمام صفحه</a>
+														</li>
+														<li class="nav-item">
+															<a href="blog-left-sidebar.html" class="nav-link">نوار سمت راست</a>
+														</li>
+														<li class="nav-item">
+															<a href="blog-right-sidebar.html" class="nav-link">نوار سمت چپ</a>
+														</li>
+														<li class="nav-item">
+															<a href="video.html" class="nav-link">ویدیو</a>
+														</li>
+													</ul>
+												</li>
+		
+												<li class="nav-item">
+													<a href="#" class="nav-link active">
+														کاربر
+														<i class="bx bx-chevron-left"></i>
+													</a>
+		
+													<ul class="dropdown-menu">
+														<li class="nav-item">
+															<a href="log-in.html" class="nav-link">ورود</a>
+														</li>
+														<li class="nav-item">
+															<a href="sign-in.html" class="nav-link active">ثبت نام</a>
+														</li>
+														<li class="nav-item">
+															<a href="recover-password.html" class="nav-link">فراموشی رمز عبور</a>
+														</li>
+													</ul>
+												</li>
+				
+												<li class="nav-item">
+													<a href="review.html" class="nav-link">نظر کاربران</a>
+												</li>
+		
+												<li class="nav-item">
+													<a href="author.html" class="nav-link">صفحه نویسنده</a>
+												</li>
+		
+												<li class="nav-item">
+													<a href="terms-conditions.html" class="nav-link">شرایط و ضوابط</a>
+												</li>
+		
+												<li class="nav-item">
+													<a href="privacy-policy.html" class="nav-link">سیاست حفظ حریم خصوصی</a>
+												</li>
+		
+												<li class="nav-item">
+													<a href="coming-soon.html" class="nav-link">به زودی</a>
+												</li>
+		
+												<li class="nav-item">
+													<a href="404.html" class="nav-link">خطای 404</a>
+												</li>
+											</ul>
+										</li>
+
+										<li class="nav-item">
+											<a href="#" class="nav-link">
+												وبلاگ
+												<i class="bx bx-chevron-down"></i>
+											</a>
+
+											<ul class="dropdown-menu">
+												<li class="nav-item">
+													<a href="blog-grid.html" class="nav-link">جدولی</a>
+												</li>
+												<li class="nav-item">
+													<a href="blog-left-sidebar.html" class="nav-link">نوار سمت راست</a>
+												</li>
+												<li class="nav-item">
+													<a href="blog-right-sidebar.html" class="nav-link">نوار سمت چپ</a>
+												</li>
+												<li class="nav-item">
+													<a href="blog-details.html" class="nav-link">جزئیات وبلاگ</a>
+												</li>
+											</ul>
+										</li>
+
+										<li class="nav-item">
+											<a href="contact.html" class="nav-link">ارتباط</a>
+										</li>
+									</ul>
+									
+									<!-- Start Other Option -->
+									<div class="others-option-two">
+										<div class="option-item">
+											<span>جستجو</span>
+											<i class="search-btn bx bx-search"></i>
+											<i class="close-btn bx bx-x"></i>
+											
+											<div class="search-overlay search-popup">
+												<div class='search-box'>
+													<form class="search-form">
+														<input class="search-input" name="search" placeholder="Search" type="text">
+		
+														<button class="search-button" type="submit"><i class="bx bx-search"></i></button>
+													</form>
+												</div>
+											</div>
+										</div>
+
+										<div class="cart burger-menu">
+											<i class="bx bxs-grid"></i>
+										</div>
+									</div>
+									<!-- End Other Option -->
+								</div>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<!-- End Navbar Area -->
+		</header>
+		<!-- End Heder Area -->
+
+		<!-- Sidebar Modal Area -->
+        <div class="sidebar-modal">
+            <div class="sidebar-modal-inner">
+                <div class="sidebar-about-area">
+                    <div class="title">
+                        <h2>درباره ما</h2>
+                        <p>ما معتقدیم تعامل با برند در ارتباطات کلیدی است. نوآوری های واقعی و تجربه مثبت مشتری قلب ارتباط موفق است. بدون محصولات و خدمات تقلبی مشتری پادشاه است، زندگی و نیازهای آنها الهام بخش است.</p>
+                    </div>
+                </div>
+
+                <div class="sidebar-instagram-feed">
+                    <h2>وبلاگ</h2>
+
+                    <ul>
+                        <li>
+							<a href="blog-details.html">
+								<img src="{% static 'img/travel-page-img/sidebar-img/1.jpg' %}" alt="image">
+							</a>
+						</li>
+                        <li>
+							<a href="blog-details.html">
+								<img src="{% static 'img/travel-page-img/sidebar-img/2.jpg' %}" alt="image">
+							</a>
+						</li>
+                        <li>
+							<a href="blog-details.html">
+								<img src="{% static 'img/travel-page-img/sidebar-img/3.jpg' %}" alt="image">
+							</a>
+						</li>
+                        <li>
+							<a href="blog-details.html">
+								<img src="{% static 'img/travel-page-img/sidebar-img/4.jpg' %}" alt="image">
+							</a>
+						</li>
+                        <li>
+							<a href="blog-details.html">
+								<img src="{% static 'img/travel-page-img/sidebar-img/5.jpg' %}" alt="image">
+							</a>
+						</li>
+                        <li>
+							<a href="blog-details.html">
+								<img src="{% static 'img/travel-page-img/sidebar-img/6.jpg' %}" alt="image">
+							</a>
+						</li>
+                        <li>
+							<a href="blog-details.html">
+								<img src="{% static 'img/travel-page-img/sidebar-img/7.jpg' %}" alt="image">
+							</a>
+						</li>
+                        <li>
+							<a href="blog-details.html">
+								<img src="{% static 'img/travel-page-img/sidebar-img/8.jpg' %}" alt="image">
+							</a>
+						</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-contact-area">
+                    <div class="contact-info">
+                        <div class="contact-info-content">
+                            <h2>
+                                <a href="tel:+61-821-456">+61-821-456</a>
+                                <span>OR</span>
+                                <a href="mailto:hello@trice.com">hello@osta.com</a>
+                            </h2>
+    
+                            <ul class="social">
+                                <li>
+									<a href="#" target="_blank">
+										<i class="bx bxl-facebook"></i>
+									</a>
+								</li>
+                                <li>
+									<a href="#" target="_blank">
+										<i class="bx bxl-twitter"></i>
+									</a>
+								</li>
+                                <li>
+									<a href="#" target="_blank">
+										<i class="bx bxl-linkedin"></i>
+									</a>
+								</li>
+                                <li>
+									<a href="#" target="_blank">
+										<i class="bx bxl-youtube"></i>
+									</a>
+								</li>
+                                <li>
+									<a href="#" target="_blank">
+										<i class="bx bxl-instagram"></i>
+									</a>
+								</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <span class="close-btn sidebar-modal-close-btn">
+					<i class="bx bx-x"></i>
+				</span>
+            </div>
+        </div>
+		<!-- End Sidebar Modal Area -->
+
+		<!-- Start Page Title Area -->
+		<div  class="page-title-area bg-8">
+			<div class="container">
+				<div class="page-title-content">
+					<h2>ثبت نام</h2>
+					<ul>
+						<li>
+							<a href="index.html">
+								خانه
+							</a>
+						</li>
+						
+						<li class="active">ثبت نام</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- End Page Title Area -->
+		
+		<!-- Start Sign Up Area -->
+		<div class="user-area-all-style sign-up-area ptb-100">
+			<div class="container">
+				<div class="contact-form-action">
+					<form method="post">
+                        {% csrf_token %}
+						<div class="row">
+							<div class="col-lg-4 col-md-4 col-sm-12">
+								<button class="default-btn" type="submit">
+									گوگل
+								</button>
+							</div>
+
+							<div class="col-lg-4 col-md-4 col-sm-12">
+								<button class="default-btn" type="submit">
+									فیسبوک
+								</button>
+							</div>
+
+							<div class="col-lg-4 col-md-4 col-sm-12">
+								<button class="default-btn" type="submit">
+									تویتر
+								</button>
+							</div>
+
+							<div class="col-md-12 col-sm-12">
+								<div class="form-group">
+									{{ forms.first_name }}
+								</div>
+							</div>
+
+							<div class="col-md-12 col-sm-12 ">
+								<div class="form-group">
+									{{ forms.last_name }}
+								</div>
+							</div>
+
+							<div class="col-md-12 col-sm-12">
+								<div class="form-group">
+									{{ forms.username }}
+								</div>
+							</div>
+
+							<div class="col-md-12 col-sm-12">
+								<div class="form-group">
+									{{ forms.email }}
+								</div>
+							</div>
+
+							<div class="col-md-12 col-sm-12">
+								<div class="form-group">
+									{{ forms.password }}
+								</div>
+							</div>
+
+							<div class="col-md-12 col-sm-12 ">
+								<div class="form-group">
+									{{ forms.passwordagain }}
+								</div>
+							</div>
+
+							<div class="col-md-12 col-sm-12 col-xs-12 form-condition">
+								<div class="agree-label">
+									<input type="checkbox" id="chb1">
+									<label for="chb1">
+										با 
+										<a href="privacy-policy.html">سیاست حفظ حریم خصوصی</a> موافقم
+									</label>
+								</div>
+
+								<div class="agree-label">
+									<input type="checkbox" id="chb2">
+									<label for="chb2">
+										با
+										<a href="terms-conditions.html">شرایط و ضوابط</a> موافقم
+									</label>
+								</div>
+							</div>
+
+							<div class="col-12">
+								<button class="default-btn btn-two" type="submit">
+									ایجاد حساب
+								</button>
+							</div>
+							
+							<div class="col-12">
+								<p class="account-desc">
+									حساب کاربری دارید؟
+									<a href="log-in.html"> وارد شوید</a>
+								</p>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- End Sign Up Area -->
+
+		<!-- Start Footer Area -->
+		<footer class="footer-area-four ptb-100">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6">
+						<div class="single-widget">
+							<a href="life-style.html">
+								<img src="{% static 'img/travel-page-img/footer-logo.png' %}" alt="Image">
+							</a>
+							<p>این راست نیست که هرچه عاشق‌ تر باشی بهتر درک می‌کنی. همه‌ی آنچه عشق و عاشقی از من می‌ خواهد فقط درکِ این حکمت است</p>
+
+							<ul class="social-icon">
+								<li>
+									<a href="#">
+										<i class="bx bxl-facebook"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="bx bxl-twitter"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="bx bxl-instagram"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="bx bxl-linkedin"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="bx bxl-youtube"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6">
+						<div class="single-widget">
+							<h3>درباره اوستا</h3>
+							<ul class="important-link">
+								<li>
+									<a href="about.html">+ درباره من</a>
+								</li>
+								<li>
+									<a href="contact.html">+ ارتباط با من </a>
+								</li>
+								<li>
+									<a href="privacy-policy.html">+ حریم خصوصی و شرایط</a>
+								</li>
+								<li>
+									<a href="#">+ در تماس باشید</a>
+								</li>
+								<li>
+									<a href="faq.html">+ سوالات متداول</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="col-lg-3 col-md-6">
+						<div class="single-widget">
+							<h3>اخبار اخیر</h3>
+							<ul class="recent-link">
+								<li>
+									<i class="bx bx-time"></i>
+									<span>12 مهر 1400</span>
+									<a href="about.html">بازدید از پل رباط</a>
+								</li>
+								
+								<li>
+									<i class="bx bx-time"></i>
+									<span>30 اردیبهشت 1399</span>
+									<a href="about.html">با رودخانه ها و تپه های ایسلند آشنا شوید</a>
+								</li>
+
+								<li>
+									<i class="bx bx-time"></i>
+									<span>15 بهمن 1401</span>
+									<a href="about.html">سفر برای هر عاشق طبیعت</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6">
+						<div class="single-widget">
+							<h3>خبرنامه</h3>
+
+							<form class="newsletter-form" data-toggle="validator">
+								<input type="email" class="form-control" placeholder="ایمیل خود را وارد کنید" name="EMAIL" required autocomplete="off">
+
+								<button class="default-btn four" type="submit">
+									عضویت
+									<i class="bx bx-left-arrow-alt"></i>
+								</button>
+
+								<div id="validator-newsletter" class="form-result"></div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- End Footer Area -->
+
+		<!-- Start Footer Bottom Area -->
+		<footer class="footer-bottom-area">
+			<div class="container">
+				<div class="copy-right">
+					<p>کپی رایت 1400 اوستا. <a href="https://www.rtl-theme.com/author/chaveamin/products/" target="blank">Designista</a></p>
+				</div>
+			</div>
+		</footer>
+		<!-- End Footer Bottom Area -->
+		
+		<!-- Start Go Top Area -->
+		<div class="go-top">
+			<i class='bx bx-chevrons-up'></i>
+			<i class='bx bx-chevrons-up'></i>
+		</div>
+		<!-- End Go Top Area -->
+		
+
+        <!-- Jquery-3.5.1.Slim.Min.JS -->
+        <script src="{% static 'js/jquery-3.5.1.slim.min.js' %}"></script>
+        <!-- Popper JS -->
+        <script src="{% static 'js/popper.min.js' %}"></script>
+        <!-- Bootstrap JS -->
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <!-- Meanmenu JS -->
+		<script src="{% static 'js/jquery.meanmenu.js' %}"></script>
+        <!-- Wow JS -->
+        <script src="{% static 'js/wow.min.js' %}"></script>
+        <!-- Owl Carousel JS -->
+		<script src="{% static 'js/owl.carousel.js' %}"></script>
+        <!-- Owl Magnific JS -->
+		<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+        <!-- Nice Select JS -->
+		<script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+		<!-- Form Validator JS -->
+		<script src="{% static 'js/form-validator.min.js' %}"></script>
+		<!-- Contact JS -->
+		<script src="{% static 'js/contact-form-script.js' %}"></script>
+		<!-- Ajaxchimp JS -->
+		<script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+        <!-- Custom JS -->
+		<script src="{% static 'js/custom.js' %}"></script>
+    </body>
+</html>
